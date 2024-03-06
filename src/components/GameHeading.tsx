@@ -2,17 +2,13 @@ import { Heading } from "@chakra-ui/react";
 import { GameQuery } from "../App";
 
 interface Props {
-    gameQuery: GameQuery;
+    gameQuery: GameQuery
 }
 
-// need to fix this
-//const heading = `${GameQuery.platform?.name || "" } ${GameQuery.genre?.name || ""} Game`;
-
-const GameHeading = ( {gameQuery}: Props ) => {
+const GameHeading = ({ gameQuery }: Props) => {
     return (
-        <Heading as="h1" marginY={5} fontSize="5xl" ></Heading>
+        <Heading as="h1" marginY={5} fontSize="5xl" >{`\`${gameQuery.platform?.name || " "} ${gameQuery.genre?.name || ""} Games\``}</Heading>
     )
 }
 
 export default GameHeading;
-
